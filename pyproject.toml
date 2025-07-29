@@ -36,4 +36,4 @@ quote-style = 'single'
 [tool.taskipy.tasks]
 lint = 'ruff check .; ruff check . --diff'
 format = 'ruff format .; ruff check . --fix'
-run = 'streamlit run dotum_client/Início.py'
+run = 'streamlit run main.py'
