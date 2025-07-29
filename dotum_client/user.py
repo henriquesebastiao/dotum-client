@@ -6,8 +6,8 @@ import streamlit as st
 from settings import BASE_URL
 
 st.set_page_config(
-    page_title='Dotum - User Page',
-    page_icon=':bust_in_silhouette:',
+    page_title='Dotum - Usuário',
+    page_icon='🙂',
     initial_sidebar_state='expanded',
 )
 
