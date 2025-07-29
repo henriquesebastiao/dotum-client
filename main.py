@@ -9,7 +9,7 @@ pages = {
     'Início': [
         st.Page('dotum_client/home.py', title='Início'),
     ],
-    'Endpoints': [
+    'Endpoints da API': [
         st.Page('dotum_client/user.py', title='Usuário'),
         st.Page('dotum_client/account.py', title='Conta'),
     ],
