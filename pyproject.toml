@@ -1,0 +1,39 @@
+[project]
+name = "dotum-client"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Henrique Sebastião",email = "contato@henriquesebastiao.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "streamlit (>=1.47.1,<2.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.12.5"
+taskipy = "^1.14.1"
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+extend-ignore = [
+    'E501',  # Line too long
+]
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
+[tool.taskipy.tasks]
+lint = 'ruff check .; ruff check . --diff'
+format = 'ruff format .; ruff check . --fix'
+run = 'streamlit run dotum_client/Início.py'
