@@ -181,8 +181,8 @@ with st.form('get_account_form'):
         if 'token' in st.session_state:
             headers = {'Authorization': f'Bearer {st.session_state.token}'}
 
-            with st.spinner('Deletando usuário...'):
-                response = requests.delete(
+            with st.spinner('Consultando usuário...'):
+                response = requests.get(
                     f'{BASE_URL}/account/{account_id}',
                     headers=headers,
                 )
