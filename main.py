@@ -42,5 +42,5 @@ def login():
             st.error('Falha no login. Verifique as credenciais.')
 
 
-if st.sidebar.button('Login'):
+if st.sidebar.button('Login', type='primary'):
     login()
