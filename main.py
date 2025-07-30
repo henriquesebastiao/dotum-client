@@ -22,6 +22,11 @@ pages = {
             title='Conta',
             icon=':material/account_balance:',
         ),
+        st.Page(
+            'dotum_client/insights.py',
+            title='Insights',
+            icon=':material/search_insights:',
+        ),
     ],
 }
 
