@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name: client-dotum
+    image: 'dotum-client:${TAG-latest}'
+    restart: always
+    build: .
+    volumes:
+      - .:/code
+    env_file:
+      - .env
+    ports:
+      - "9004:8501"

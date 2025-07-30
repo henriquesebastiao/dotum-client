@@ -9,7 +9,8 @@ readme = "README.md"
 requires-python = ">=3.13,<4.0"
 dependencies = [
     "streamlit (>=1.47.1,<2.0.0)",
-    "plotly (>=6.2.0,<7.0.0)"
+    "plotly (>=6.2.0,<7.0.0)",
+    "load-dotenv (>=0.1.0,<0.2.0)"
 ]
 
 [build-system]
@@ -38,3 +39,4 @@ quote-style = 'single'
 lint = 'ruff check .; ruff check . --diff'
 format = 'ruff format .; ruff check . --fix'
 run = 'streamlit run main.py'
+export = 'rm requirements.txt && poetry export -f requirements.txt --output requirements.txt --without-hashes --without dev'
