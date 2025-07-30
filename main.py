@@ -7,11 +7,21 @@ from settings import BASE_URL
 
 pages = {
     'Início': [
-        st.Page('dotum_client/home.py', title='Início'),
+        st.Page(
+            'dotum_client/home.py', title='Início', icon=':material/home:'
+        ),
     ],
     'Endpoints da API': [
-        st.Page('dotum_client/user.py', title='Usuário'),
-        st.Page('dotum_client/account.py', title='Conta'),
+        st.Page(
+            'dotum_client/user.py',
+            title='Usuário',
+            icon=':material/account_circle:',
+        ),
+        st.Page(
+            'dotum_client/account.py',
+            title='Conta',
+            icon=':material/account_balance:',
+        ),
     ],
 }
 
