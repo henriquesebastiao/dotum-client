@@ -9,7 +9,7 @@ from settings import BASE_URL
 
 st.set_page_config(
     page_title='Dotum - Contas',
-    page_icon=':bust_in_silhouette:',
+    page_icon='🏦',
     initial_sidebar_state='expanded',
 )
 
@@ -333,7 +333,9 @@ st.markdown("""
 st.markdown('### Experimente')
 
 with st.form('delete_account_form'):
-    account_id = st.number_input('ID da conta', value=1, min_value=1)
+    account_id = st.number_input(
+        'ID da conta', value=1, min_value=1, icon=':material/tag:'
+    )
 
     submitted = st.form_submit_button('Deletar')
 

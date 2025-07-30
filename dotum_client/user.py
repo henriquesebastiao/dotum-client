@@ -56,10 +56,14 @@ st.markdown('### Experimente')
 
 with st.form('create_user_form'):
     username = st.text_input('Nome de usuário')
-    email = st.text_input('Email', placeholder='user@example.com')
+    email = st.text_input(
+        'Email',
+        placeholder='user@example.com',
+        icon=':material/alternate_email:',
+    )
     first_name = st.text_input('Nome')
     last_name = st.text_input('Sobrenome')
-    password = st.text_input('Senha', type='password')
+    password = st.text_input('Senha', type='password', icon=':material/key:')
 
     submitted = st.form_submit_button('Registrar')
 
@@ -113,15 +117,21 @@ st.code(
     language='json',
 )
 
-st.markdown('### Experimente :material/key:')
+st.markdown('### Experimente')
 
 with st.form('update_user_form'):
-    user_id = st.number_input('ID do usuário', value=1, min_value=1)
+    user_id = st.number_input(
+        'ID do usuário', value=1, min_value=1, icon=':material/tag:'
+    )
     username = st.text_input('Nome de usuário')
-    email = st.text_input('Email', placeholder='user@example.com')
+    email = st.text_input(
+        'Email',
+        placeholder='user@example.com',
+        icon=':material/alternate_email:',
+    )
     first_name = st.text_input('Nome')
     last_name = st.text_input('Sobrenome')
-    password = st.text_input('Senha', type='password')
+    password = st.text_input('Senha', type='password', icon=':material/key:')
 
     submitted = st.form_submit_button('Atualizar')
 
@@ -172,7 +182,9 @@ st.markdown("""
 st.markdown('### Experimente')
 
 with st.form('delete_user_form'):
-    user_id = st.number_input('ID do usuário', value=1, min_value=1)
+    user_id = st.number_input(
+        'ID do usuário', value=1, min_value=1, icon=':material/tag:'
+    )
 
     submitted = st.form_submit_button('Deletar')
 
