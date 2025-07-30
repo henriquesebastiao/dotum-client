@@ -1,4 +1,5 @@
 from http import HTTPStatus
+from time import sleep
 
 import requests
 import streamlit as st
@@ -9,6 +10,11 @@ pages = {
     'Início': [
         st.Page(
             'dotum_client/home.py', title='Início', icon=':material/home:'
+        ),
+        st.Page(
+            'dotum_client/dashboards.py',
+            title='Dashboards',
+            icon=':material/dashboard:',
         ),
     ],
     'Endpoints da API': [
@@ -53,9 +59,44 @@ def login():
             st.session_state['token'] = token
             st.success('Login bem-sucedido!')
             st.balloons()
+
+            # Tempo para a animação ser exibida
+            sleep(2)
+            st.rerun()
         else:
             st.error('Falha no login. Verifique as credenciais.')
 
 
 if st.sidebar.button('Login', type='primary'):
     login()
+
+if st.sidebar.button('Login as Demo user'):
+    auth_data = {
+        'username': 'demo',
+        'password': 'demo',
+    }
+
+    response = requests.post(f'{BASE_URL}/token', data=auth_data)
+
+    if response.status_code == HTTPStatus.OK:
+        token = response.json()['access_token']
+        st.session_state['token'] = token
+        st.sidebar.success('Login bem-sucedido!')
+        st.balloons()
+
+        # Tempo para a animação ser exibida
+        sleep(2)
+        st.rerun()
+    else:
+        st.sidebar.error('Falha no login. Verifique as credenciais.')
+
+if st.sidebar.button('Exit'):
+    if 'token' in st.session_state:
+        del st.session_state.token
+        st.sidebar.success('Usuário desconectado!')
+
+        # Tempo para o aviso de sucesso ser exibido
+        sleep(1)
+        st.rerun()
+    else:
+        pass
