@@ -18,7 +18,7 @@ st.title('🗃️ Dotum - Sistema de contas')
 st.markdown("""
 Este projeto é uma solução para um desafio de programação back-end, cujo objetivo é desenvolver uma aplicação para o controle de contas a pagar e contas a receber. A proposta foca na construção de uma lógica sólida, estrutura de código bem organizada e cumprimento dos requisitos funcionais.
 
-Este é cliente web desenvolvido com [Streamlit](https://streamlit.io/) para consumir a API de back-end da aplicação.
+Este é um cliente web desenvolvido com [Streamlit](https://streamlit.io/) para consumir a API de back-end da aplicação.
 Os links do projeto estão listados a baixo:
 
 - [github.com/henriquesebastiao/dotum](https://github.com/henriquesebastiao/dotum) - Repositório da API
@@ -36,7 +36,7 @@ O back-end da aplicação da aplicação foi desenvolvido com as seguintes ferra
 
 ### Interaja com a aplicação
 
-No menu lateral 👈 você pode acessar as páginas que consomente a API do sistema.
+No menu lateral 👈 você pode acessar as páginas que consomem a API do sistema.
 
 Abaixo é exibido um breve resumo do geral de contas registradas no sistema:
 """)
