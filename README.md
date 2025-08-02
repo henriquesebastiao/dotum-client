@@ -1,5 +1,11 @@
 # 🗃️ Dotum Client - Sistema de Contas
 
+[![Code Quality](https://github.com/henriquesebastiao/dotum-client/actions/workflows/code-quality.yml/badge.svg)](https://github.com/henriquesebastiao/dotum-client/actions/workflows/code-quality.yml)
+[![Static Badge](https://img.shields.io/badge/status-stable-%232FBF50)](https://github.com/henriquesebastiao/dotum-client/)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fdotum-web.henriquesebastiao.com%2F)](https://dotum-web.henriquesebastiao.com/)
+[![GitHub Release](https://img.shields.io/github/v/release/henriquesebastiao/dotum-client?color=blue)](https://github.com/henriquesebastiao/dotum-client/releases)
+[![GitHub License](https://img.shields.io/github/license/henriquesebastiao/dotum-client?color=blue)](https://github.com/henriquesebastiao/dotum-client/blob/main/LICENSE)
+
 Este projeto é uma solução para um desafio de programação back-end, cujo objetivo é desenvolver uma aplicação para o controle de contas a pagar e contas a receber. A proposta foca na construção de uma lógica sólida, estrutura de código bem organizada e cumprimento dos requisitos funcionais.
 
 Este é cliente web desenvolvido com [Streamlit](https://streamlit.io/) para consumir a API de back-end da aplicação.
